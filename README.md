@@ -36,7 +36,7 @@ all options
 $ ./uvc_stream -h
 test
 vlc http://localhost:8080/
-firefox http://localhost:8080/snapshot
+firefox http://localhost:8080/snapshot.jpeg
 ```
 
 ### License
