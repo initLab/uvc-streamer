@@ -23,6 +23,7 @@
 *******************************************************************************/
 
 #include <stdlib.h>
+#include <linux/limits.h>
 
 #include "v4l2uvc.h"
 
@@ -44,10 +45,10 @@ init_videoIn(struct vdIn *vd, char *device, int width, int height, int fps,
   vd->videodevice = NULL;
   vd->status = NULL;
   vd->pictName = NULL;
-  vd->videodevice = (char *) calloc(1, 16 * sizeof(char));
+  vd->videodevice = (char *) calloc(1, PATH_MAX * sizeof(char));
   vd->status = (char *) calloc(1, 100 * sizeof(char));
   vd->pictName = (char *) calloc(1, 80 * sizeof(char));
-  snprintf(vd->videodevice, 12, "%s", device);
+  snprintf(vd->videodevice, PATH_MAX, "%s", device);
 
   vd->recordtime = 0;
   vd->framecount = 0;
