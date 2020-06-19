@@ -117,6 +117,8 @@ struct resolutions resolutions_formats[] = {
   {"320x240",   320, 240  },
   {"320x200",   320, 200  },
   {"160x120",   160, 120  },
+
+  {"1024x768", 1024, 768  },
 };
 
 int stop=0;
